@@ -19,6 +19,7 @@
 
     <link rel="stylesheet" href="style/ins2wgm.css">
     <link rel="stylesheet" type="text/css" href="style/app.css">
+    <link rel="stylesheet" type="text/css" href="style/mystyle.css">
 
     <script src="js/ga.js"></script><script>
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
@@ -87,7 +88,7 @@
                         });
                     }
                 }" class="hidden fixed top-0 bottom-0 left-0 z-20 h-full w-16 flex flex-col bg-gradient-to-b from-gray-100 to-white transition-all duration-300 overflow-hidden lg:sticky lg:w-80 lg:flex-shrink-0 lg:flex lg:justify-end lg:items-end 2xl:max-w-lg 2xl:w-full dark:from-dark-800 dark:to-dark-700" :class="{ &#39;w-64&#39;: navIsOpen }" @click.away="navIsOpen = false" @keydown.window.escape="navIsOpen = false">
-                <div class="relative min-h-0 flex-1 flex flex-col xl:w-80">
+                <div class="relative min-h-0 flex-1 flex flex-col xl:w-80 left-menu">
 
                     <!--      Логотип              -->
 
@@ -315,9 +316,10 @@
                         <div x-data="searchComponent()" x-init="init()" class="relative mt-8 flex justify-end w-full lg:mt-0">
                             <div class="relative w-full border-b border-gray-600 border-opacity-50 overflow-hidden transition-all duration-500 focus-within:border-gray-600" @click="searchIsOpen = true" @click.away="clear" @keydown.window.escape="clear" @keydown.window="handleSlashKey">
                                 <svg class="absolute inset-y-0 left-0 mt-1 w-5 h-5 text-gray-900 pointer-events-none dark:text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
-                                <input x-model.debouce.200ms="search" x-ref="searchInput" class="flex-1 w-full pl-8 pr-4 py-1 placeholder-gray-900 tracking-wide bg-white focus:outline-none dark:bg-dark-700 dark:text-gray-400 dark:placeholder-gray-500" placeholder="Search Docs (Press &#39;/&#39;)" aria-label="Search in the documentation" @keydown.arrow-up.prevent="focusPreviousResult()" @keydown.arrow-down.prevent="focusNextResult()">
+<!--                                <input x-model.debouce.200ms="search" x-ref="searchInput" class="flex-1 w-full pl-8 pr-4 py-1 placeholder-gray-900 tracking-wide bg-white focus:outline-none dark:bg-dark-700 dark:text-gray-400 dark:placeholder-gray-500 search-text" placeholder="Search Docs (Press &#39;/&#39;)" aria-label="Search in the documentation" @keydown.arrow-up.prevent="focusPreviousResult()" @keydown.arrow-down.prevent="focusNextResult()">-->
+                                <input class="flex-1 w-full pl-8 pr-4 py-1 placeholder-gray-900 tracking-wide bg-white focus:outline-none dark:bg-dark-700 dark:text-gray-400 dark:placeholder-gray-500 search-text" placeholder="Search Docs (Press &#39;/&#39;)" aria-label="Search in the documentation">
                             </div>
-                            <div x-show="hits.length" class="absolute w-full mt-8 pt-px divide-y divide-gray-200 shadow-sm z-30 dark:divide-dark-500" style="display: none;">
+                            <div x-show="hits.length" class="absolute w-full mt-8 pt-px divide-y divide-gray-200 shadow-sm z-30 dark:divide-dark-500 show-search" style="display: none;">
     <template x-for="(hit, index) in hits" :key="index"></template>
 	<div class="bg-gray-100 flex justify-end dark:bg-dark-600 dark:text-gray-400">
 		<a class="px-4 py-2 inline-block keychainify-checked" target="_blank" href="https://www.algolia.com/?utm_source=laravel&amp;utm_medium=link&amp;utm_campaign=laravel_documentation_search">
@@ -347,33 +349,43 @@
                                                          <div id="main-content">
 <h1>Куки</h1>
 <h3 id="cookie-work"><a href="#cookie-work" class="keychainify-checked">Код для удобной работы с куками</a></h3>
-<pre class=" language-php" tabindex="0"><code class=" language-php">
+<pre class="language-php code-text" tabindex="0">
+    <img class="clipboard-img" src="./img/clipboard.svg" alt="буфер обмена">
+    <code class=" language-php">
 window.setCookie = (name, value) => {
     document.cookie = `${name} = '${value}'`;
 };
 window.getCookie = (name) => {
     const match = document.cookie.match(new RegExp(`(^| )${name}=([^;]+)`));
     if (match) return match[2];};
-</code></pre>
+    </code>
+</pre>
 
 
 <h1>Цели</h1>
 <h3 id="goals-function"><a href="#goals-function" class="keychainify-checked">Функция для срабатывания целей</a></h3>
-<pre class=" language-php" tabindex="0"><code class=" language-php">
+<pre class=" language-php code-text" tabindex="0">
+    <img class="clipboard-img" src="./img/clipboard.svg" alt="буфер обмена">
+    <code class=" language-php">
 const fireGoal = (name) => Kameleoon.API.Goals.processConversion(goals[name]);
-</code></pre>
+    </code>
+</pre>
 
 
 <h1>Лайфхак</h1>
 <h3 id="lifehack-search"><a href="#lifehack-search" class="keychainify-checked">Нахождение элемента</a></h3>
-<pre class=" language-php" tabindex="0"><code class=" language-php">
-document.
-querySelector("#\\310021468 > div > a > div.ADealOfDay__Details > div")
-</code></pre>
+<pre class=" language-php code-text" tabindex="0">
+     <img class="clipboard-img" src="./img/clipboard.svg" alt="буфер обмена">
+    <code class=" language-php">
+document.querySelector("#\\310021468 > div > a > div.ADealOfDay__Details > div")
+    </code>
+</pre>
 
 <h1>Отключение тестов</h1>
 <h3 id="disable-test"><a href="#disable-test" class="keychainify-checked">Отключить тесты на странице</a></h3>
-<pre class=" language-php" tabindex="0"><code class=" language-php">
+<pre class=" language-php code-text" tabindex="0">
+     <img class="clipboard-img" src="./img/clipboard.svg" alt="буфер обмена">
+    <code class=" language-php">
 #kameleoonDisabled=true
 </code></pre>
 
@@ -381,7 +393,8 @@ querySelector("#\\310021468 > div > a > div.ADealOfDay__Details > div")
 <h3 id="sibling"><a href="#sibling" class="keychainify-checked">Различия ElementSibling и Sibling</a></h3>
 <p>Немного введу в курс дела, в чем различие между <code>ElementSibling</code> и <code>Sibling</code>.</p>
 <p>Для примера возьмем такой HTML:</p>
-<pre tabindex="0">
+<pre class=" language-php code-text" tabindex="0">
+<img class="clipboard-img" src="./img/clipboard.svg" alt="буфер обмена">
 <code>
     <textarea>
     <div>
@@ -407,7 +420,9 @@ querySelector("#\\310021468 > div > a > div.ADealOfDay__Details > div")
     Чаще всего используется для отслеживания добавления товара в корзину.
     Чтобы узнать по какому url идет запрос, нужно открыть вкладку network в devtools
 </p>
-<pre class=" language-php" tabindex="0"><code class=" language-php">
+<pre class=" language-php code-text" tabindex="0">
+    <img class="clipboard-img" src="./img/clipboard.svg" alt="буфер обмена">
+    <code class=" language-php">
 (function(open) {
     XMLHttpRequest.prototype.open = function(method, url, async, user, pass) {
          this.addEventListener(
@@ -422,12 +437,15 @@ querySelector("#\\310021468 > div > a > div.ADealOfDay__Details > div")
         open.call(this, method, url, async, user, pass);
     };
 })(XMLHttpRequest.prototype.open);
-</code></pre>
+    </code>
+</pre>
 
 
 <h1>After и Before</h1>
 <h3 id="after-before"><a href="#after-before" class="keychainify-checked">Перенос строки в псевдоэлементе after / before</a></h3>
-<pre class=" language-php" tabindex="0"><code class=" language-php">
+<pre class=" language-php code-text" tabindex="0">
+    <img class="clipboard-img" src="./img/clipboard.svg" alt="буфер обмена">
+    <code class=" language-php">
 content: 'Введите название города \0a или дилерского центра';
 line-height: normal;
 white-space: pre;
@@ -438,7 +456,9 @@ white-space: pre;
 <p>
     Дождаться джейквери(jQuery) и что то сделать с ним. Здесь пример со слик слайдером
 </p>
-<pre class=" language-php" tabindex="0"><code class=" language-php">
+<pre class=" language-php code-text" tabindex="0">
+     <img class="clipboard-img" src="./img/clipboard.svg" alt="буфер обмена">
+    <code class=" language-php">
 Kameleoon.API.Core.runWhenConditionTrue(function(){
   return jQuery && jQuery.fn && jQuery.fn.init && jQuery.fn.init.prototype.slick && jQuery.fn.init.prototype.slick;
 }, function(){
@@ -451,7 +471,8 @@ Kameleoon.API.Core.runWhenConditionTrue(function(){
       });
     });
 },
-</code></pre>
+    </code>
+</pre>
 
 <h1>Ширина и высота экрана</h1>
 <h3 id="screen"><a href="#screen" class="keychainify-checked">Ширина и высота экрана</a></h3>
@@ -462,7 +483,9 @@ Kameleoon.API.Core.runWhenConditionTrue(function(){
 
 <h1>Скролл</h1>
 <h3 id="scroll"><a href="#scroll" class="keychainify-checked">Определения, доскролили до элемента или проскролили всю страницу</a></h3>
-<pre class=" language-php" tabindex="0"><code class=" language-php">
+<pre class=" language-php code-text" tabindex="0">
+     <img class="clipboard-img" src="./img/clipboard.svg" alt="буфер обмена">
+    <code class=" language-php">
 const elementScrollCheck = document.querySelector('blalbalba');
 function checkScroll() {
     // Доскролили до блока
@@ -482,7 +505,8 @@ function checkScroll() {
 }
 checkScroll();
 document.addEventListener('scroll', checkScroll);
-</code></pre>
+    </code>
+</pre>
 <!--<p>Thanks to the new <code>HasFactory</code> trait available on generated models, the model factory may be used like so:</p>-->
 <!--<pre class=" language-php" tabindex="0"><code class=" language-php"><span class="token keyword">use</span> <span class="token package">App<span class="token punctuation">\</span>Models<span class="token punctuation">\</span>User</span><span class="token punctuation">;</span>-->
 
@@ -514,7 +538,9 @@ document.addEventListener('scroll', checkScroll);
     var version = '8.x';
 </script>
 
+<script src="js/my.js"></script>
 <script src="js/app.js"></script>
+
 
 <script>
     var _gaq=[['_setAccount','UA-23865777-1'],['_trackPageview']];

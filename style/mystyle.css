@@ -1,0 +1,16 @@
+.left-menu {
+    position: fixed !important;
+    top: 0;
+}
+
+.code-text {
+    position: relative;
+}
+
+.clipboard-img {
+    position: absolute;
+    right: 5px;
+    width: 25px;
+    top: 5px;
+    cursor: pointer;
+}
