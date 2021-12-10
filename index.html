@@ -216,10 +216,28 @@
             <header class="lg:hidden" @keydown.window.escape="navIsOpen = false" @click.away="navIsOpen = false">
                 <div class="relative mx-auto w-full py-10 bg-white transition duration-200 dark:bg-dark-700 mobile-fixed">
                     <div class="mx-auto px-8 sm:px-16 flex items-center justify-between">
-                        <a href="https://laravel.com/" class="flex items-center keychainify-checked">
-                            <img class="" src="img/logomark.min.svg" alt="Laravel">
-                            <img class="hidden ml-5 sm:block" src="img/logotype.min.svg" alt="Laravel">
-                        </a>
+<!--                        <a href="https://laravel.com/" class="flex items-center keychainify-checked">-->
+<!--                            <img class="" src="img/logomark.min.svg" alt="Laravel">-->
+<!--                            <img class="hidden ml-5 sm:block" src="img/logotype.min.svg" alt="Laravel">-->
+<!--                        </a>-->
+
+                        <svg id="logo" width="155" height="40" viewBox="0 0 155 40" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M61.5331 27.3094H58.2842L53.1769 20.6151V27.3094H50.3574V13.0178H53.1769V19.3155L58.08 13.0178H61.3288L56.0373 19.9594L61.5331 27.3094Z"></path>
+                            <path d="M69.6435 17.101H72.2786V27.3092H69.6435V26.1047C68.8531 27.0981 67.7435 27.5948 66.3131 27.5948C64.9511 27.5948 63.7826 27.0743 62.8091 26.0333C61.835 24.9922 61.3486 23.7157 61.3486 22.2049C61.3486 20.6947 61.835 19.418 62.8091 18.3771C63.7826 17.336 64.9511 16.8156 66.3131 16.8156C67.7435 16.8156 68.8531 17.3123 69.6435 18.3057V17.101ZM64.7806 24.2777C65.3121 24.815 65.986 25.0838 66.8033 25.0838C67.6206 25.0838 68.2982 24.8152 68.8361 24.2777C69.374 23.7401 69.6435 23.0493 69.6435 22.2049C69.6435 21.3611 69.374 20.6709 68.8361 20.1327C68.2984 19.5952 67.6208 19.3265 66.8033 19.3265C65.9859 19.3265 65.3121 19.5952 64.7806 20.1327C64.2498 20.6709 63.984 21.3611 63.984 22.2049C63.984 23.0493 64.2498 23.7401 64.7806 24.2777Z" fill=""></path>
+                            <path d="M85.9685 16.8154C87.1393 16.8154 88.0758 17.1962 88.7773 17.9585C89.4787 18.7209 89.8297 19.7418 89.8297 21.0209V27.3092H87.1939V21.2044C87.1939 20.5923 87.0441 20.1158 86.7445 19.7756C86.4449 19.4354 86.0224 19.2651 85.4777 19.2651C84.8785 19.2651 84.4121 19.4625 84.0786 19.857C83.7445 20.2523 83.5777 20.8236 83.5777 21.572V27.309H80.9419V21.2042C80.9419 20.5922 80.7921 20.1156 80.4925 19.7754C80.1929 19.4353 79.7705 19.265 79.2263 19.265C78.6403 19.265 78.1739 19.4623 77.8266 19.8568C77.4793 20.2522 77.3057 20.8234 77.3057 21.5719V27.3089H74.6699V17.1007H77.3057V18.1825C77.9188 17.271 78.8653 16.8151 80.1452 16.8151C81.3983 16.8151 82.3248 17.3049 82.9239 18.2846C83.6047 17.3052 84.6195 16.8154 85.9685 16.8154Z" fill=""></path>
+                            <path d="M94.3038 23.2872C94.658 24.5669 95.6182 25.2065 97.1846 25.2065C98.1919 25.2065 98.9548 24.8663 99.4725 24.1855L101.597 25.4107C100.59 26.867 99.1046 27.595 97.1433 27.595C95.4546 27.595 94.0994 27.0845 93.0778 26.0641C92.0561 25.0432 91.5459 23.7572 91.5459 22.205C91.5459 20.6672 92.0492 19.3844 93.0578 18.3566C94.0651 17.3294 95.3588 16.8157 96.939 16.8157C98.4377 16.8157 99.6732 17.333 100.647 18.3673C101.621 19.4014 102.108 20.6811 102.108 22.2052C102.108 22.5459 102.074 22.9067 102.006 23.2875H94.3038V23.2872ZM94.263 21.2459H99.4725C99.3227 20.5512 99.013 20.0345 98.543 19.6937C98.0728 19.3542 97.5382 19.1838 96.939 19.1838C96.2307 19.1838 95.6452 19.3642 95.1819 19.7244C94.7188 20.0852 94.4122 20.5925 94.263 21.2459Z" fill=""></path>
+                            <path d="M103.946 27.3093V12.4052H106.582V27.3093H103.946Z" fill=""></path>
+                            <path d="M111.22 23.2872C111.574 24.5669 112.534 25.2065 114.101 25.2065C115.108 25.2065 115.871 24.8663 116.389 24.1855L118.513 25.4107C117.506 26.867 116.021 27.595 114.059 27.595C112.371 27.595 111.015 27.0845 109.994 26.0641C108.972 25.0432 108.462 23.7572 108.462 22.205C108.462 20.6672 108.965 19.3844 109.974 18.3566C110.981 17.3294 112.275 16.8157 113.855 16.8157C115.354 16.8157 116.589 17.333 117.563 18.3673C118.537 19.4014 119.024 20.6811 119.024 22.2052C119.024 22.5459 118.99 22.9067 118.922 23.2875H111.22V23.2872ZM111.179 21.2459H116.389C116.239 20.5512 115.929 20.0345 115.459 19.6937C114.989 19.3542 114.454 19.1838 113.855 19.1838C113.147 19.1838 112.561 19.3642 112.098 19.7244C111.635 20.0852 111.328 20.5925 111.179 21.2459Z" fill=""></path>
+                            <path d="M129.484 26.0333C128.436 27.0744 127.155 27.5948 125.643 27.5948C124.131 27.5948 122.854 27.0743 121.813 26.0333C120.771 24.9922 120.25 23.7157 120.25 22.2049C120.25 20.6947 120.771 19.418 121.813 18.3771C122.854 17.336 124.131 16.8156 125.643 16.8156C127.155 16.8156 128.436 17.3361 129.484 18.3771C130.533 19.4182 131.058 20.6947 131.058 22.2049C131.058 23.7157 130.533 24.9924 129.484 26.0333ZM123.672 24.2262C124.196 24.7574 124.853 25.0223 125.643 25.0223C126.433 25.0223 127.094 24.7573 127.625 24.2262C128.157 23.6957 128.422 23.0216 128.422 22.2049C128.422 21.3888 128.157 20.7147 127.625 20.1842C127.094 19.6531 126.433 19.3875 125.643 19.3875C124.853 19.3875 124.196 19.6531 123.672 20.1842C123.147 20.7147 122.885 21.3888 122.885 22.2049C122.885 23.0216 123.147 23.6957 123.672 24.2262Z" fill=""></path>
+                            <path d="M141.62 26.0333C140.571 27.0744 139.291 27.5948 137.779 27.5948C136.267 27.5948 134.99 27.0743 133.948 26.0333C132.906 24.9922 132.386 23.7157 132.386 22.2049C132.386 20.6947 132.907 19.418 133.948 18.3771C134.99 17.336 136.267 16.8156 137.779 16.8156C139.291 16.8156 140.571 17.3361 141.62 18.3771C142.669 19.4182 143.193 20.6947 143.193 22.2049C143.193 23.7157 142.669 24.9924 141.62 26.0333ZM135.807 24.2262C136.331 24.7574 136.989 25.0223 137.779 25.0223C138.569 25.0223 139.23 24.7573 139.761 24.2262C140.292 23.6957 140.558 23.0216 140.558 22.2049C140.558 21.3888 140.292 20.7147 139.761 20.1842C139.23 19.6531 138.569 19.3875 137.779 19.3875C136.989 19.3875 136.331 19.6531 135.807 20.1842C135.283 20.7147 135.021 21.3888 135.021 22.2049C135.021 23.0216 135.283 23.6957 135.807 24.2262Z" fill=""></path>
+                            <path d="M150.732 16.8154C151.849 16.8154 152.771 17.19 153.5 17.938C154.229 18.6872 154.593 19.7213 154.593 21.0418V27.3094H151.958V21.3682C151.958 20.688 151.774 20.1674 151.406 19.8067C151.038 19.4459 150.548 19.2655 149.935 19.2655C149.253 19.2655 148.709 19.4766 148.301 19.8982C147.892 20.3203 147.688 20.9536 147.688 21.7974V27.3095H145.052V17.1014H147.688V18.2445C148.328 17.2921 149.343 16.8154 150.732 16.8154Z" fill=""></path>
+                            <path d="M6.0415 22.9907C6.0415 29.0693 10.9727 33.9969 17.0554 33.9969C23.1382 33.9969 28.0692 29.0693 28.0692 22.9907C28.0692 16.9122 23.1382 11.9846 17.0554 11.9846C10.9725 11.9845 6.0415 16.9122 6.0415 22.9907ZM12.0491 22.9907C12.0491 20.2277 14.2905 17.988 17.0553 17.988C19.8201 17.988 22.0616 20.2279 22.0616 22.9907C22.0616 25.7538 19.8202 27.9935 17.0553 27.9935C14.2903 27.9935 12.0491 25.7536 12.0491 22.9907Z" fill="#FE2020"></path>
+                            <path d="M17.056 5.98108V11.9845C10.9732 11.9845 6.04207 16.912 6.04207 22.9906C6.04207 29.0691 10.9732 33.9967 17.056 33.9967C23.1387 33.9967 28.0698 29.0691 28.0698 22.9906H34.0773C34.0773 32.3846 26.4566 40.0001 17.056 40.0001C7.65542 40.0001 0.034668 32.3848 0.034668 22.9907C0.034668 13.5967 7.65542 5.98108 17.056 5.98108Z" fill="#2EE5AC"></path>
+                            <path d="M17.0557 5.98101V1.00302C17.0557 0.433429 17.5315 -0.024351 18.101 0.00100485C29.9879 0.531645 39.5303 10.0674 40.0613 21.946C40.0867 22.5152 39.6287 22.9907 39.0586 22.9907H34.077C34.077 13.5965 26.4564 5.98101 17.0557 5.98101Z" fill="#2EE5AC"></path>
+                            <path d="M17.0557 11.9845V5.98108C26.4564 5.98108 34.077 13.5965 34.077 22.9906H28.0694C28.0696 16.9122 23.1384 11.9845 17.0557 11.9845Z" fill="#6464FF"></path>
+                            <path d="M17.0555 27.9934C19.8204 27.9934 22.0617 25.7536 22.0617 22.9907C22.0617 20.2277 19.8204 17.9879 17.0555 17.9879C14.2907 17.9879 12.0493 20.2277 12.0493 22.9907C12.0493 25.7536 14.2907 27.9934 17.0555 27.9934Z" fill="#0A0A0A"></path>
+                        </svg>
+
                         <div class="flex-1 flex items-center justify-end">
                             <button id="header__sun" onclick="toSystemMode()" title="Switch to system theme" class="relative w-10 h-10 focus:outline-none focus:shadow-outline text-gray-500">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-sun" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -245,86 +263,87 @@
                         </div>
                     </div>
                     <span :class="{ &#39;shadow-sm&#39;: navIsOpen }" class="absolute inset-0 z-20 pointer-events-none"></span>
+                    <div x-show="navIsOpen" x-transition:enter="duration-150" x-transition:leave="duration-100 ease-in" style="display: none;">
+                        <nav x-show="navIsOpen" class="absolute w-full transform origin-top shadow-sm z-10" x-transition:enter="duration-150 ease-out" x-transition:enter-start="opacity-0 -translate-y-8 scale-75" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="duration-100 ease-in" x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 -translate-y-8 scale-75" style="display: none;">
+                            <div class="relative p-8 bg-white docs_sidebar dark:bg-dark-600">
+
+                                <ul>
+
+                                    <li>
+                                        <h2>Куки</h2>
+                                        <ul>
+                                            <li><a href="#cookie-work" class="keychainify-checked">Работа с куками</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li>
+                                        <h2>Цели</h2>
+                                        <ul>
+                                            <li><a href="#goals-function" class="keychainify-checked">функция для срабатывания целей</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li>
+                                        <h2>Лайфхак</h2>
+                                        <ul>
+                                            <li><a href="#lifehack-search" class="keychainify-checked">Нахождение элемента</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li>
+                                        <h2>Отключение тестов</h2>
+                                        <ul>
+                                            <li><a href="#disable-test" class="keychainify-checked">Отключить тесты</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li>
+                                        <h2>ElementSibling и Sibling</h2>
+                                        <ul>
+                                            <li><a href="#sibling" class="keychainify-checked">Различия</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li>
+                                        <h2>Request</h2>
+                                        <ul>
+                                            <li><a href="#request" class="keychainify-checked">Перехват реквеста</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li>
+                                        <h2>After и Before</h2>
+                                        <ul>
+                                            <li><a href="#after-before" class="keychainify-checked">Перенос строки</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li>
+                                        <h2>Jquery</h2>
+                                        <ul>
+                                            <li><a href="#jquery" class="keychainify-checked">Дождаться jquery</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li>
+                                        <h2>Экран</h2>
+                                        <ul>
+                                            <li><a href="#screen" class="keychainify-checked">Ширина и высота экрана</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li>
+                                        <h2>Скролл</h2>
+                                        <ul>
+                                            <li><a href="#scroll" class="keychainify-checked">Доскролили и проскролили</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
                 </div>
-                <div x-show="navIsOpen" x-transition:enter="duration-150" x-transition:leave="duration-100 ease-in" style="display: none;">
-                    <nav x-show="navIsOpen" class="absolute w-full transform origin-top shadow-sm z-10" x-transition:enter="duration-150 ease-out" x-transition:enter-start="opacity-0 -translate-y-8 scale-75" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="duration-100 ease-in" x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 -translate-y-8 scale-75" style="display: none;">
-                        <div class="relative p-8 bg-white docs_sidebar dark:bg-dark-600">
 
-                            <ul>
-
-                                <li>
-                                    <h2>Куки</h2>
-                                    <ul>
-                                        <li><a href="#cookie-work" class="keychainify-checked">Работа с куками</a></li>
-                                    </ul>
-                                </li>
-
-                                <li>
-                                    <h2>Цели</h2>
-                                    <ul>
-                                        <li><a href="#goals-function" class="keychainify-checked">функция для срабатывания целей</a></li>
-                                    </ul>
-                                </li>
-
-                                <li>
-                                    <h2>Лайфхак</h2>
-                                    <ul>
-                                        <li><a href="#lifehack-search" class="keychainify-checked">Нахождение элемента</a></li>
-                                    </ul>
-                                </li>
-
-                                <li>
-                                    <h2>Отключение тестов</h2>
-                                    <ul>
-                                        <li><a href="#disable-test" class="keychainify-checked">Отключить тесты</a></li>
-                                    </ul>
-                                </li>
-
-                                <li>
-                                    <h2>ElementSibling и Sibling</h2>
-                                    <ul>
-                                        <li><a href="#sibling" class="keychainify-checked">Различия</a></li>
-                                    </ul>
-                                </li>
-
-                                <li>
-                                    <h2>Request</h2>
-                                    <ul>
-                                        <li><a href="#request" class="keychainify-checked">Перехват реквеста</a></li>
-                                    </ul>
-                                </li>
-
-                                <li>
-                                    <h2>After и Before</h2>
-                                    <ul>
-                                        <li><a href="#after-before" class="keychainify-checked">Перенос строки</a></li>
-                                    </ul>
-                                </li>
-
-                                <li>
-                                    <h2>Jquery</h2>
-                                    <ul>
-                                        <li><a href="#jquery" class="keychainify-checked">Дождаться jquery</a></li>
-                                    </ul>
-                                </li>
-
-                                <li>
-                                    <h2>Экран</h2>
-                                    <ul>
-                                        <li><a href="#screen" class="keychainify-checked">Ширина и высота экрана</a></li>
-                                    </ul>
-                                </li>
-
-                                <li>
-                                    <h2>Скролл</h2>
-                                    <ul>
-                                        <li><a href="#scroll" class="keychainify-checked">Доскролили и проскролили</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
-                </div>
             </header>
 
             <section class="flex-1 dark:bg-dark-700 mobile-top">
@@ -594,7 +613,7 @@ document.addEventListener('scroll', checkScroll);
     var version = '8.x';
 </script>
 
-<script src="js/my.js"></script>
+
 <script src="js/app.js"></script>
 
 
@@ -607,5 +626,13 @@ document.addEventListener('scroll', checkScroll);
     }(document,'script'));
 </script>
 
+     <script
+             src="https://code.jquery.com/jquery-3.6.0.js"
+             integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+             crossorigin="anonymous">
+
+     </script>
+
+<script src="js/my.js"></script>
 
 </body></html>
