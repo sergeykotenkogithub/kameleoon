@@ -214,7 +214,7 @@
             </aside>
 
             <header class="lg:hidden" @keydown.window.escape="navIsOpen = false" @click.away="navIsOpen = false">
-                <div class="relative mx-auto w-full py-10 bg-white transition duration-200 dark:bg-dark-700">
+                <div class="relative mx-auto w-full py-10 bg-white transition duration-200 dark:bg-dark-700 mobile-fixed">
                     <div class="mx-auto px-8 sm:px-16 flex items-center justify-between">
                         <a href="https://laravel.com/" class="flex items-center keychainify-checked">
                             <img class="" src="img/logomark.min.svg" alt="Laravel">
@@ -249,24 +249,85 @@
                 <div x-show="navIsOpen" x-transition:enter="duration-150" x-transition:leave="duration-100 ease-in" style="display: none;">
                     <nav x-show="navIsOpen" class="absolute w-full transform origin-top shadow-sm z-10" x-transition:enter="duration-150 ease-out" x-transition:enter-start="opacity-0 -translate-y-8 scale-75" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="duration-100 ease-in" x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 -translate-y-8 scale-75" style="display: none;">
                         <div class="relative p-8 bg-white docs_sidebar dark:bg-dark-600">
-                            <ul>
-<li class="sub--on">
-<!-- <h2>R</h2> -->
-<ul>
-<li class="active"><a href="https://laravel.com/docs/8.x/releases" class="keychainify-checked">Release Notes</a></li>
-<li><a href="https://laravel.com/docs/8.x/upgrade" class="keychainify-checked">Upgrade Guide</a></li>
-<li><a href="https://laravel.com/docs/8.x/contributions" class="keychainify-checked">Contribution Guide</a></li>
-</ul>
-</li>
-<li>
-    </ul>
 
+                            <ul>
+
+                                <li>
+                                    <h2>Куки</h2>
+                                    <ul>
+                                        <li><a href="#cookie-work" class="keychainify-checked">Работа с куками</a></li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <h2>Цели</h2>
+                                    <ul>
+                                        <li><a href="#goals-function" class="keychainify-checked">функция для срабатывания целей</a></li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <h2>Лайфхак</h2>
+                                    <ul>
+                                        <li><a href="#lifehack-search" class="keychainify-checked">Нахождение элемента</a></li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <h2>Отключение тестов</h2>
+                                    <ul>
+                                        <li><a href="#disable-test" class="keychainify-checked">Отключить тесты</a></li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <h2>ElementSibling и Sibling</h2>
+                                    <ul>
+                                        <li><a href="#sibling" class="keychainify-checked">Различия</a></li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <h2>Request</h2>
+                                    <ul>
+                                        <li><a href="#request" class="keychainify-checked">Перехват реквеста</a></li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <h2>After и Before</h2>
+                                    <ul>
+                                        <li><a href="#after-before" class="keychainify-checked">Перенос строки</a></li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <h2>Jquery</h2>
+                                    <ul>
+                                        <li><a href="#jquery" class="keychainify-checked">Дождаться jquery</a></li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <h2>Экран</h2>
+                                    <ul>
+                                        <li><a href="#screen" class="keychainify-checked">Ширина и высота экрана</a></li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <h2>Скролл</h2>
+                                    <ul>
+                                        <li><a href="#scroll" class="keychainify-checked">Доскролили и проскролили</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
                         </div>
                     </nav>
                 </div>
             </header>
 
-            <section class="flex-1 dark:bg-dark-700">
+            <section class="flex-1 dark:bg-dark-700 mobile-top">
                 <div class="max-w-screen-lg px-8 sm:px-16 lg:px-24">
                     <div class="flex flex-col items-end lg:mt-8 lg:flex-row-reverse">
                         <div class="hidden lg:flex items-center justify-center ml-8">

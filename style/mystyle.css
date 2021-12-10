@@ -24,3 +24,29 @@
 .show-search {
     background: black;
 }
+
+@media (min-width: 1290px) {
+    .max-w-prose {
+        max-width: 84ch !important;
+    }
+}
+
+@media (min-width: 1023px) {
+    .keychainify-checked, p {
+        word-break: break-all;
+    }
+
+    .mobile-fixed {
+        position: fixed !important;
+        z-index: 1;
+    }
+
+    .mobile-top {
+        padding-top: 115px;
+    }
+}
+
+
+
+
+
